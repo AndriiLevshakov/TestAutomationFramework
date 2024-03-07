@@ -12,7 +12,7 @@ namespace Core
             string downloadPath = Path.Combine(userPath, "Downloads");
 
             var options = new ChromeOptions();
-            //options.AddArguments("--headless");
+            options.AddArguments("--headless");
             options.AddArguments("--window-size=1920,1080");
             options.AddUserProfilePreference("download.default_directory", downloadPath);
 

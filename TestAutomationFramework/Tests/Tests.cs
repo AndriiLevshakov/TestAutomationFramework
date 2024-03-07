@@ -1,6 +1,8 @@
 ﻿using Business;
 using Core;
 using NLog;
+using OpenQA.Selenium.DevTools.V120.Page;
+using TestLayer.TestFixtures;
 
 namespace TestLayer
 {
@@ -52,6 +54,8 @@ namespace TestLayer
             }
             catch (Exception ex)
             {
+                ScreenShot.CaptureScreenshot(WebDriverManager.Driver, nameof(Test1_Careers));
+
                 logger.Error($"An error occurred in Test1_Careers: {ex.Message}");
                 throw;
             }
